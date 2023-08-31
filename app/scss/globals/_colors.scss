@@ -1,6 +1,11 @@
 // Primary Colors
-$clr-tomato: hsl(4, 100%, 67%);
+$clr-tomato: hsl(9, 100%, 64%);
+$clr-pink: hsl(350, 99%, 67%);
 $clr-gray-slate: hsl(234, 29%, 20%);
 $clr-gray-charcoal: hsl(235, 18%, 26%);
 $clr-gray-light: hsl(231, 7%, 60%);
 $clr-white: hsl(0, 0%, 100%);
+
+:export {
+  clrTomato: $clr-tomato;
+}

@@ -1,4 +1,12 @@
-console.log("hello world");
-const one = 1;
+import variables from "../scss/globals/_colors.scss";
 
-const two = 3;
+const button = document.querySelector("button");
+
+// button hover effect
+button.addEventListener("mouseover", () => {
+  button.style.color = "black";
+});
+
+button.addEventListener("mouseout", () => {
+  button.style.filter = "none";
+});

@@ -1,0 +1,110 @@
+@use "../utilities/" as *;
+@use "../globals/" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  background-color: $clr-white;
+
+  .img-ctn {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    h1,
+    p,
+    form {
+      padding: 0 20px;
+    }
+
+    .list-item {
+      display: flex;
+      gap: 20px;
+      padding: 5px 20px;
+
+      img {
+        display: inline-block;
+        height: 100%;
+        vertical-align: top;
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 35px;
+
+      label {
+        font-size: rem(13);
+        font-weight: 700;
+      }
+
+      input {
+        padding: 15px;
+        font-size: rem(14);
+        border-radius: 10px;
+        border: 1px solid $clr-gray-light;
+      }
+
+      ::placeholder {
+        color: $clr-gray-light;
+      }
+
+      button {
+        background: linear-gradient(90deg, $clr-pink, $clr-tomato);
+        border: none;
+        color: $clr-white;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: rem(16);
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@include breakpoint(lg) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .card {
+      max-width: 900px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: 25px;
+      border-radius: 25px;
+
+      .img-ctn img {
+        height: 500px;
+        padding: 0;
+      }
+
+      .card-text {
+        .form {
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+}
